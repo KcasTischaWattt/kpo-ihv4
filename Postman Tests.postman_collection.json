@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "a43fb75f-3558-4e72-83b4-65178986a1f0",
+		"name": "Postman Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27669590"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/user/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJHZW9yZzIiLCJpYXQiOjE2ODUzMDY0MTYsImV4cCI6MTY4NTMwODIxNn0.PVD__6Mwhhn3wPsndeArcA8sHBqVmSd-uZd3zK1hKw6n-N-5ebt3JWd39ShMQQyzBIHOkynvz_W4w36uIz3LGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Admin\",\r\n    \"email\": \"Admin@hse.ru\",\r\n    \"passwordHash\": \"secret\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/user/login?username=Admin&password=secret",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Georg2\",\r\n    \"email\": \"georg2@gmail.com\",\r\n    \"passwordHash\": \"test\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/login?username=Admin&password=secret",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Admin"
+						},
+						{
+							"key": "password",
+							"value": "secret"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/user/get_info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4NTMyMTM1NiwiZXhwIjoxNjg1MzIzMTU2fQ.r_AEP2VUjV_n4FP7VgpsdtCLMFHp1QLXcNZYTPVezoaqfr3TRHoO8z6ozK5xorj4wMbDZ6WxAnHng1o-3i07wA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Georg2\",\r\n    \"email\": \"georg2@gmail.com\",\r\n    \"passwordHash\": \"test\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/get_info",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"get_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/user/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJHZW9yZzIiLCJpYXQiOjE2ODUzMDY0MTYsImV4cCI6MTY4NTMwODIxNn0.PVD__6Mwhhn3wPsndeArcA8sHBqVmSd-uZd3zK1hKw6n-N-5ebt3JWd39ShMQQyzBIHOkynvz_W4w36uIz3LGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Admin\",\r\n    \"email\": \"Adminhse.ru\",\r\n    \"passwordHash\": \"secret\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/user/login?username=Admin&password=wrong",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Georg2\",\r\n    \"email\": \"georg2@gmail.com\",\r\n    \"passwordHash\": \"test\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/login?username=Admin&password=wrong",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Admin"
+						},
+						{
+							"key": "password",
+							"value": "wrong"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/user/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJHZW9yZzIiLCJpYXQiOjE2ODUzMDY0MTYsImV4cCI6MTY4NTMwODIxNn0.PVD__6Mwhhn3wPsndeArcA8sHBqVmSd-uZd3zK1hKw6n-N-5ebt3JWd39ShMQQyzBIHOkynvz_W4w36uIz3LGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Admin\",\r\n    \"email\": \"Admin2@hse.ru\",\r\n    \"passwordHash\": \"secret\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/user/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJHZW9yZzIiLCJpYXQiOjE2ODUzMDY0MTYsImV4cCI6MTY4NTMwODIxNn0.PVD__6Mwhhn3wPsndeArcA8sHBqVmSd-uZd3zK1hKw6n-N-5ebt3JWd39ShMQQyzBIHOkynvz_W4w36uIz3LGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Admin2\",\r\n    \"email\": \"Admin@hse.ru\",\r\n    \"passwordHash\": \"secret\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/user/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJHZW9yZzIiLCJpYXQiOjE2ODUzMDY0MTYsImV4cCI6MTY4NTMwODIxNn0.PVD__6Mwhhn3wPsndeArcA8sHBqVmSd-uZd3zK1hKw6n-N-5ebt3JWd39ShMQQyzBIHOkynvz_W4w36uIz3LGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"2\",\r\n    \"email\": \"@\",\r\n    \"passwordHash\": \"secret\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/user/get_info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImlhdCI6MTY4NTMyMTM1NiwiZXhwIjoxNjg1MzIzMTU2fQ.r_AEP2VUjV_n4DFP7VgpsdtCLMFHp1QLXcNZYTPVezoaqfr3TRHoO8z6ozK5xorj4wMbDZ6WxAnHng1o-3i07wA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Georg2\",\r\n    \"email\": \"georg2@gmail.com\",\r\n    \"passwordHash\": \"test\",\r\n    \"role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/get_info",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"get_info"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
