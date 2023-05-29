@@ -15,7 +15,7 @@
 
 Сперва пользователя нудно зарегестировать. Для этогонужно сделать следующие шаги
 
->POST `localhost:8080/api/user/register`
+> * POST `localhost:8080/api/user/register`
 >
 
 ``` json
